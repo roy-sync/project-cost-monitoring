@@ -37,7 +37,7 @@ const LoginPage = () => {
   const handleBitrixSignIn = async() => {
     // Redirect the user to the Bitrix OAuth login page
     const clientId = "local.674e7e4d5f4a02.57385705"; // Use your actual client ID
-    const redirectUri = encodeURIComponent('http://206.189.147.71:54030/bitrix/callback');
+    const redirectUri = encodeURIComponent('https://project-cost-monitoring.vercel.app/bitrix/callback');
     const bitrixAuthUrl = `https://oauth.bitrix.info/oauth/authorize/?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code`;
     // Redirect user to Bitrix login page
     // window.location.href = bitrixAuthUrl;

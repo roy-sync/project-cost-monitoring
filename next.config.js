@@ -4,7 +4,7 @@ const nextConfig = {
   env: {
     // API_BASE_URL: "http://206.189.147.71:10100/api/", // Replace with your Laravel API base URL
     // API_BASE_URL: `${process.env.NEXTAUTH_URL}`,
-    API_BASE_URL: `http://206.189.147.71:54030/`,
+    API_BASE_URL: `https://project-cost-monitoring.vercel.app/`,
     AUTH_TOKEN: `${process.env.NEXTAUTH_SECRET}`,
   },
 
