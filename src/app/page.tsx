@@ -64,7 +64,7 @@ function Home() {
   console.log(`isProjectOwner: ${isProjectOwner}`);
   
 
-  if (userLoaded && !isProjectManager) {
+  if (userLoaded && isAdmin && !isProjectManager) {
     return (
       <MainPrompt
         title="Access Denied"
