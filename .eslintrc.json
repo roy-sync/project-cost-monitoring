@@ -1,0 +1,12 @@
+{
+  "plugins": ["react-redux"],
+  "extends": [
+    // Other ESLint extends...
+    "next",
+    "prettier",
+    "plugin:react-redux/recommended"
+  ],
+  "rules": {
+    // Other ESLint rules...
+  }
+}
