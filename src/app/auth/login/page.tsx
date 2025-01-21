@@ -42,7 +42,7 @@ const LoginPage = () => {
     const bitrixAuthUrl = `https://oauth.bitrix.info/oauth/authorize/?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&domain=${portalDomain}`;
     // Redirect user to Bitrix login page
     // window.location.href = bitrixAuthUrl;
-    router.push(bitrixAuthUrl);
+    router.push("https://syntactics.bitrix24.com/oauth/authorize/?client_id=local.674e7e4d5f4a02.57385705&current_fieldset=SOCSERV");
   };
 
   // console.log("TCL: LoginPage -> error", error);
