@@ -14,11 +14,9 @@ const LoginPage = () => {
   };
   
 
-  // console.log("TCL: LoginPage -> error", error);
-
   return (
     <div className='m-0 overflow-hidden  bg-gray-100 bg-gradient-to-br from-orange-400 via-orange-500  to-yellow-600'>
-      {/* <div className='relative'>
+      <div className='relative'>
         <Image
           src='/images/background.svg'
           alt=''
@@ -46,54 +44,7 @@ const LoginPage = () => {
                 Project Cost Monitoring System
               </h1>
             </div>
-            {/* <Formik
-              initialValues={{ emp_id: "", emp_key: "" }}
-              validationSchema={validationSchema}
-              onSubmit={handleFormSubmit}
-            >
-              <Form className='my-5'>
-                <div className='mb-4'>
-                  <Field
-                    placeholder='Employee ID'
-                    type='text'
-                    id='emp_id'
-                    name='emp_id'
-                    autoComplete='off'
-                    className='w-full rounded-full border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none'
-                  />
-                  <ErrorMessage
-                    name='emp_id'
-                    component='div'
-                    className='text-red-500'
-                  />
-                </div>
-                <div className='mb-4'>
-                  <Field
-                    placeholder='Employee Key'
-                    type='password'
-                    id='emp_key'
-                    name='emp_key'
-                    autoComplete='new-password'
-                    className='w-full rounded-full border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none'
-                  />
-                  <ErrorMessage
-                    name='emp_key'
-                    component='div'
-                    className='text-red-500'
-                  />
-                </div>
-                <div className="flex flex-col space-y-5">
-                  <button
-                    type='submit'
-                    className='w-full rounded-full bg-blue-500 px-4 py-2 text-white hover:bg-blue-600'
-                  >
-                    Log In
-                  </button>
-                  
-                </div>
-              </Form>
-              
-            </Formik>
+            
             <button
                 className='flex flex-row justify-center items-center space-x-5 w-full rounded-full py-2 border font-semibold'
                 onClick={()=>handleBitrixSignIn()}
@@ -103,14 +54,8 @@ const LoginPage = () => {
             </button>
           </div>
         </div>
-      </div> */}
-      <button
-          className='flex flex-row justify-center items-center space-x-5 w-full rounded-full py-2 border font-semibold'
-          onClick={()=>handleBitrixSignIn()}
-        >
-          <img src="/images/bitrix-logo.svg" alt="" />
-          <p>Log In With Bitrix</p>
-      </button>
+      </div>
+      
     </div>
   );
 };
