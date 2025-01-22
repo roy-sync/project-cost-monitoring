@@ -2,15 +2,15 @@
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+// import { useRouter, useSearchParams } from "next/navigation";
+// import { useEffect, useState } from "react";
 import * as Yup from "yup";
 interface LoginFormValues {
   emp_id: string;
   emp_key: string;
 }
 const LoginPage = () => {
-  const router = useRouter();
+  // const router = useRouter();
 
   const validationSchema = Yup.object().shape({
     emp_id: Yup.string().required("Employee ID is required"),
@@ -34,16 +34,14 @@ const LoginPage = () => {
     setSubmitting(false);
   };
 
-  const handleBitrixSignIn = async() => {
-    // Redirect the user to the Bitrix OAuth login page
+  const handleBitrixSignIn = () => {
     const clientId = "local.674e7e4d5f4a02.57385705"; // Use your actual client ID
     const redirectUri = encodeURIComponent('https://project-cost-monitoring.vercel.app/bitrix/callback');
-    const portalDomain = 'syntactics.bitrix24.com'; // Replace with the appropriate portal
+    const portalDomain = 'syntactics.bitrix24.com';
     const bitrixAuthUrl = `https://oauth.bitrix.info/oauth/authorize/?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&domain=${portalDomain}`;
-    // Redirect user to Bitrix login page
-    // window.location.href = bitrixAuthUrl;
-    router.push("https://syntactics.bitrix24.com/oauth/authorize/?client_id=local.674e7e4d5f4a02.57385705&current_fieldset=SOCSERV");
+    window.location.href = bitrixAuthUrl; // Use window.location for full redirection
   };
+  
 
   // console.log("TCL: LoginPage -> error", error);
 
@@ -77,7 +75,7 @@ const LoginPage = () => {
                 Project Cost Monitoring System
               </h1>
             </div>
-            <Formik
+            {/* <Formik
               initialValues={{ emp_id: "", emp_key: "" }}
               validationSchema={validationSchema}
               onSubmit={handleFormSubmit}
@@ -124,7 +122,7 @@ const LoginPage = () => {
                 </div>
               </Form>
               
-            </Formik>
+            </Formik> */}
             <button
                 className='flex flex-row justify-center items-center space-x-5 w-full rounded-full py-2 border font-semibold'
                 onClick={()=>handleBitrixSignIn()}
