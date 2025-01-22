@@ -2,7 +2,7 @@
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
-// import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 // import { useEffect, useState } from "react";
 import * as Yup from "yup";
 interface LoginFormValues {
@@ -10,7 +10,7 @@ interface LoginFormValues {
   emp_key: string;
 }
 const LoginPage = () => {
-  // const router = useRouter();
+  const router = useRouter();
 
   const validationSchema = Yup.object().shape({
     emp_id: Yup.string().required("Employee ID is required"),
@@ -39,7 +39,7 @@ const LoginPage = () => {
     const redirectUri = encodeURIComponent('https://project-cost-monitoring.vercel.app/bitrix/callback');
     const portalDomain = 'syntactics.bitrix24.com';
     const bitrixAuthUrl = `https://oauth.bitrix.info/oauth/authorize/?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&domain=${portalDomain}`;
-    window.location.href = bitrixAuthUrl; // Use window.location for full redirection
+    router.push(bitrixAuthUrl);
   };
   
 
