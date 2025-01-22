@@ -1,10 +1,10 @@
 "use client";
-import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
-import { signIn } from "next-auth/react";
+// import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
+// import { signIn } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 // import { useEffect, useState } from "react";
-import * as Yup from "yup";
+// import * as Yup from "yup";
 interface LoginFormValues {
   emp_id: string;
   emp_key: string;
@@ -12,27 +12,27 @@ interface LoginFormValues {
 const LoginPage = () => {
   const router = useRouter();
 
-  const validationSchema = Yup.object().shape({
-    emp_id: Yup.string().required("Employee ID is required"),
-    emp_key: Yup.string().required("Employee Key is required"),
-  });
+  // const validationSchema = Yup.object().shape({
+  //   emp_id: Yup.string().required("Employee ID is required"),
+  //   emp_key: Yup.string().required("Employee Key is required"),
+  // });
 
-  const handleFormSubmit = async (
-    values: LoginFormValues,
-    { setSubmitting }: FormikHelpers<LoginFormValues>
-  ) => {
-    try {
-      await signIn("credentials", {
-        emp_id: values.emp_id,
-        emp_key: values.emp_key,
-        redirect: true,
-        callbackUrl: "/",
-      });
-    } catch (error) {
-      console.log("Login error:", error);
-    }
-    setSubmitting(false);
-  };
+  // const handleFormSubmit = async (
+  //   values: LoginFormValues,
+  //   { setSubmitting }: FormikHelpers<LoginFormValues>
+  // ) => {
+  //   try {
+  //     await signIn("credentials", {
+  //       emp_id: values.emp_id,
+  //       emp_key: values.emp_key,
+  //       redirect: true,
+  //       callbackUrl: "/",
+  //     });
+  //   } catch (error) {
+  //     console.log("Login error:", error);
+  //   }
+  //   setSubmitting(false);
+  // };
 
   const handleBitrixSignIn = () => {
     const clientId = "local.674e7e4d5f4a02.57385705"; // Use your actual client ID
