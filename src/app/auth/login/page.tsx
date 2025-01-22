@@ -1,45 +1,16 @@
-// "use client";
-// import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
-// import { signIn } from "next-auth/react";
+"use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-// import { useEffect, useState } from "react";
-// import * as Yup from "yup";
-interface LoginFormValues {
-  emp_id: string;
-  emp_key: string;
-}
 const LoginPage = () => {
-  // const router = useRouter();
 
-  // const validationSchema = Yup.object().shape({
-  //   emp_id: Yup.string().required("Employee ID is required"),
-  //   emp_key: Yup.string().required("Employee Key is required"),
-  // });
-
-  // const handleFormSubmit = async (
-  //   values: LoginFormValues,
-  //   { setSubmitting }: FormikHelpers<LoginFormValues>
-  // ) => {
-  //   try {
-  //     await signIn("credentials", {
-  //       emp_id: values.emp_id,
-  //       emp_key: values.emp_key,
-  //       redirect: true,
-  //       callbackUrl: "/",
-  //     });
-  //   } catch (error) {
-  //     console.log("Login error:", error);
-  //   }
-  //   setSubmitting(false);
-  // };
+  const router = useRouter();
 
   const handleBitrixSignIn = () => {
-    // const clientId = "local.674e7e4d5f4a02.57385705"; // Use your actual client ID
-    // const redirectUri = encodeURIComponent('https://project-cost-monitoring.vercel.app/bitrix/callback');
-    // const portalDomain = 'syntactics.bitrix24.com';
-    // const bitrixAuthUrl = `https://oauth.bitrix.info/oauth/authorize/?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&domain=${portalDomain}`;
-    // router.push(bitrixAuthUrl);
+    const clientId = "local.674e7e4d5f4a02.57385705"; // Use your actual client ID
+    const redirectUri = encodeURIComponent('https://project-cost-monitoring.vercel.app/bitrix/callback');
+    const portalDomain = 'syntactics.bitrix24.com';
+    const bitrixAuthUrl = `https://oauth.bitrix.info/oauth/authorize/?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&domain=${portalDomain}`;
+    router.push(bitrixAuthUrl);
   };
   
 
@@ -47,25 +18,25 @@ const LoginPage = () => {
 
   return (
     <div className='m-0 overflow-hidden  bg-gray-100 bg-gradient-to-br from-orange-400 via-orange-500  to-yellow-600'>
-      <div className='relative'>
-        {/* <Image
+      {/* <div className='relative'>
+        <Image
           src='/images/background.svg'
           alt=''
           height={500}
           width={500}
           className='absolute z-0  m-0  w-screen'
-        /> */}
+        />
       </div>
       <div className='relative mx-auto flex h-screen items-center justify-center '>
         <div className='px-5 w-1/4 rounded-3xl bg-slate-50/25 p-2 shadow-xl outline outline-2 outline-white backdrop-blur-sm backdrop-filter'>
           <div className='top-1/8 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 transform'>
-            {/* <Image
+            <Image
               src='/images/logo.svg'
               width={100}
               height={50}
               alt='Picture of the author'
               className='mx-auto'
-            /> */}
+            />
           </div>
           <div className='py-3 text-center'>
             <div className='mb-10'></div>
@@ -122,17 +93,24 @@ const LoginPage = () => {
                 </div>
               </Form>
               
-            </Formik> */}
+            </Formik>
             <button
                 className='flex flex-row justify-center items-center space-x-5 w-full rounded-full py-2 border font-semibold'
-                // onClick={()=>handleBitrixSignIn()}
+                onClick={()=>handleBitrixSignIn()}
               >
-                {/* <img src="/images/bitrix-logo.svg" alt="" /> */}
+                <img src="/images/bitrix-logo.svg" alt="" />
                 <p>Log In With Bitrix</p>
-              </button>
+            </button>
           </div>
         </div>
-      </div>
+      </div> */}
+      <button
+          className='flex flex-row justify-center items-center space-x-5 w-full rounded-full py-2 border font-semibold'
+          onClick={()=>handleBitrixSignIn()}
+        >
+          <img src="/images/bitrix-logo.svg" alt="" />
+          <p>Log In With Bitrix</p>
+      </button>
     </div>
   );
 };
