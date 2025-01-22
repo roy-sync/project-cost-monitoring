@@ -1,7 +1,11 @@
 import axios from "axios";
+import https from "https";
 
 const axiosInstance = axios.create({
   baseURL: "http://206.189.147.71:10100/api",
+  httpsAgent: new https.Agent({  
+    rejectUnauthorized: false,  // Disable SSL certificate validation
+  }),
 });
 
 axiosInstance.interceptors.request.use(
