@@ -48,24 +48,24 @@ const LoginPage = () => {
   return (
     <div className='m-0 overflow-hidden  bg-gray-100 bg-gradient-to-br from-orange-400 via-orange-500  to-yellow-600'>
       <div className='relative'>
-        <Image
+        {/* <Image
           src='/images/background.svg'
           alt=''
           height={500}
           width={500}
           className='absolute z-0  m-0  w-screen'
-        />
+        /> */}
       </div>
       <div className='relative mx-auto flex h-screen items-center justify-center '>
         <div className='px-5 w-1/4 rounded-3xl bg-slate-50/25 p-2 shadow-xl outline outline-2 outline-white backdrop-blur-sm backdrop-filter'>
           <div className='top-1/8 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 transform'>
-            <Image
+            {/* <Image
               src='/images/logo.svg'
               width={100}
               height={50}
               alt='Picture of the author'
               className='mx-auto'
-            />
+            /> */}
           </div>
           <div className='py-3 text-center'>
             <div className='mb-10'></div>
@@ -127,7 +127,7 @@ const LoginPage = () => {
                 className='flex flex-row justify-center items-center space-x-5 w-full rounded-full py-2 border font-semibold'
                 onClick={()=>handleBitrixSignIn()}
               >
-                <img src="/images/bitrix-logo.svg" alt="" />
+                {/* <img src="/images/bitrix-logo.svg" alt="" /> */}
                 <p>Log In With Bitrix</p>
               </button>
           </div>
