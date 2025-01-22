@@ -125,7 +125,7 @@ const LoginPage = () => {
             </Formik> */}
             <button
                 className='flex flex-row justify-center items-center space-x-5 w-full rounded-full py-2 border font-semibold'
-                onClick={()=>handleBitrixSignIn()}
+                // onClick={()=>handleBitrixSignIn()}
               >
                 {/* <img src="/images/bitrix-logo.svg" alt="" /> */}
                 <p>Log In With Bitrix</p>
