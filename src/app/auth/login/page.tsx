@@ -10,7 +10,7 @@ interface LoginFormValues {
   emp_key: string;
 }
 const LoginPage = () => {
-  const router = useRouter();
+  // const router = useRouter();
 
   // const validationSchema = Yup.object().shape({
   //   emp_id: Yup.string().required("Employee ID is required"),
@@ -35,11 +35,11 @@ const LoginPage = () => {
   // };
 
   const handleBitrixSignIn = () => {
-    const clientId = "local.674e7e4d5f4a02.57385705"; // Use your actual client ID
-    const redirectUri = encodeURIComponent('https://project-cost-monitoring.vercel.app/bitrix/callback');
-    const portalDomain = 'syntactics.bitrix24.com';
-    const bitrixAuthUrl = `https://oauth.bitrix.info/oauth/authorize/?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&domain=${portalDomain}`;
-    router.push(bitrixAuthUrl);
+    // const clientId = "local.674e7e4d5f4a02.57385705"; // Use your actual client ID
+    // const redirectUri = encodeURIComponent('https://project-cost-monitoring.vercel.app/bitrix/callback');
+    // const portalDomain = 'syntactics.bitrix24.com';
+    // const bitrixAuthUrl = `https://oauth.bitrix.info/oauth/authorize/?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&domain=${portalDomain}`;
+    // router.push(bitrixAuthUrl);
   };
   
 
