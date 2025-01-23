@@ -8,7 +8,7 @@ export function middleware(request: NextRequest) {
     console.log("🚀 ~ middleware ~ token:", token)
 
     // Define the paths that should bypass authentication
-    const bypassRoutes = ['/api'];
+    const bypassRoutes = ['/api', '/auth/login', '/_next', '/favicon.ico'];
 
     // Check if the current request URL matches any bypass route
     if (bypassRoutes.some((route) => request.nextUrl.pathname.startsWith(route))) {

@@ -39,7 +39,8 @@ export const Header = () => {
     { label: "Holiday Settings", path: "/holiday" },
   ];
   const { data: session, status } = useSession();
-  if (status === "loading") {
+
+  if (!session) {
     return <></>;
   }
 
