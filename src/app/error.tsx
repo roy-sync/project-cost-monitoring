@@ -9,7 +9,8 @@ export default function Error({
   error: Error;
   reset: () => void;
 }) {
-  // console.error("the error: ", error.name);
+  console.error("the error: ", error.name);
+  console.error("the error: ", error);
   // if(error.message === 'NEXT_NOT_FOUND' ){
   //   return <div>err</div>
   // }
