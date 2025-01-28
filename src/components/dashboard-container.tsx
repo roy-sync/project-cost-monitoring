@@ -85,6 +85,7 @@ export default function DashboardContainer() {
     ? "grid h-full grid-cols-7 duration-300 animate-fade-in"
     : "grid h-full grid-cols-3 duration-300 animate-fade-in";
 
+  console.log(`projects: ${projects}`);
   return (
     <>
       {isLoading ? (
@@ -94,7 +95,7 @@ export default function DashboardContainer() {
           <div className="grid grid-cols-5 gap-1 px-4">
             {/* <ProjectTimelineChart /> */}
             <Drawer isOpen={setDrawerOpen} />
-            <MainProjectCard total={projects.data.length} />
+            {/* <MainProjectCard total={projects.data.length} /> */}
             <div>
               <div className="mt-3 h-3 w-full rounded-l bg-red-500"></div>
 

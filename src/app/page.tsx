@@ -25,9 +25,9 @@ function Home() {
             const { data: projects } = await axiosInstance.get(`/projects`, {
               params: { owner_id: data.data.ID },
             });
-            if(projects && projects.data){
-              setIsProjectOwner(projects.data.data.length > 0);
-            }
+            // if(projects && projects.data){
+            //   setIsProjectOwner(projects.data.data.length > 0);
+            // }
           } catch (projectsError) {
             console.warn("Failed to fetch projects:", projectsError);
             setIsProjectOwner(false); // Default to false if fetching projects fails
