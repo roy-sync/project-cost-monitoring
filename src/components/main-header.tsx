@@ -40,7 +40,7 @@ export const Header = () => {
   ];
   const { data: session, status } = useSession();
 
-  if (!session) {
+  if (status === "loading") {
     return <></>;
   }
 
