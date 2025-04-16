@@ -51,7 +51,7 @@ export async function GET(request: Request) {
             // Set token as an HTTP-only cookie in the response headers
             const origin = new URL(request.url).origin;
             // const testResponse = NextResponse.redirect(`${origin}/`);
-            const response = NextResponse.redirect("http://206.189.147.71:54030/");
+            const response = NextResponse.redirect("https://project-cost-monitoring.vercel.app/");
 
             // console.log(testResponse);
 
