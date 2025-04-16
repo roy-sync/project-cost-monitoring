@@ -4,8 +4,8 @@ import fetch from 'node-fetch';
 
 // const CLIENT_ID = process.env.BITRIX_CLIENT_ID!;
 // const CLIENT_SECRET = process.env.BITRIX_CLIENT_SECRET!;
-const CLIENT_ID = "local.674e7e4d5f4a02.57385705";
-const CLIENT_SECRET = "jHxd0SvBLYa9GAEwTu06JxYX35TW5nhrJfX7cRqvJ0oX9ELkpH";
+const CLIENT_ID = "local.67ff193ff2cbc9.59883640";
+const CLIENT_SECRET = "puc6bOOthe6BbtpibVkoGyvFAaSUOm51gY47oN6Ay7Bm13it9D";
 const REDIRECT_URI = 'https://project-cost-monitoring.vercel.app/bitrix/callback';
 
 // Define an interface for the expected structure of token data
