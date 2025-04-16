@@ -6,7 +6,7 @@ import fetch from 'node-fetch';
 // const CLIENT_SECRET = process.env.BITRIX_CLIENT_SECRET!;
 const CLIENT_ID = "local.674e7e4d5f4a02.57385705";
 const CLIENT_SECRET = "jHxd0SvBLYa9GAEwTu06JxYX35TW5nhrJfX7cRqvJ0oX9ELkpH";
-const REDIRECT_URI = 'http://206.189.147.71:54030/bitrix/callback';
+const REDIRECT_URI = 'https://project-cost-monitoring.vercel.app/bitrix/callback';
 
 // Define an interface for the expected structure of token data
 interface TokenData {
